@@ -7,7 +7,7 @@ const EpisodeList = props => {
 
   useEffect(() => {
     axios
-      .get("")
+      .get("https://rickandmortyapi.com/api/episode/")
       .then(resolve => setList(resolve.data.results))
       .catch(error => console.log("omg episodes > ", error));
   }, [props.match.path]);
@@ -23,4 +23,4 @@ const EpisodeList = props => {
 
 export default EpisodeList;
 
-// https://rickandmortyapi.com/api/episodes
+// https://rickandmortyapi.com/api/episode/
