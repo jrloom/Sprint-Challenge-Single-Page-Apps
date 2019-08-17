@@ -4,7 +4,7 @@ import { Card, Image, Icon } from "semantic-ui-react";
 
 const CharacterCard = ({ character }) => {
   return (
-    <Card>
+    <Card raised>
       <Image src={character.image} alt={character.name} />
       <Card.Content>
         <Card.Header>{character.name}</Card.Header>
