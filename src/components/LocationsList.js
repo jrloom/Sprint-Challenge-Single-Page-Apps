@@ -7,7 +7,7 @@ const LocationList = props => {
 
   useEffect(() => {
     axios
-      .get("")
+      .get("https://rickandmortyapi.com/api/location")
       .then(resolve => setList(resolve.data.results))
       .catch(error => console.log("omg locations > ", error));
   }, [props.match.path]);
@@ -21,4 +21,6 @@ const LocationList = props => {
   );
 };
 
-export default LocationsList;
+export default LocationList;
+
+// https://rickandmortyapi.com/api/location
