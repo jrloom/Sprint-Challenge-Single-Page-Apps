@@ -7,7 +7,7 @@ const CharacterList = props => {
 
   useEffect(() => {
     axios
-      .get("")
+      .get("https://rickandmortyapi.com/api/character/")
       .then(resolve => setList(resolve.data.results))
       .catch(error => console.log("omg character > ", error));
   }, [props.match.path]);
@@ -22,3 +22,5 @@ const CharacterList = props => {
 };
 
 export default CharacterList;
+
+// https://rickandmortyapi.com/api/character/
