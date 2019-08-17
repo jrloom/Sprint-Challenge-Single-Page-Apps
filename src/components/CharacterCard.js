@@ -1,18 +1,25 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { Card, Image, Icon } from "semantic-ui-react";
 
-const CharacterCard = () => {
+const CharacterCard = ({ character }) => {
   return (
     <Card>
-      <Image alt={"altText"} />
+      <Image src={character.image} alt={character.name} />
       <Card.Content>
-        <Card.Header>Character Name</Card.Header>
-        <Card.Meta>Character Status</Card.Meta>
-        <Card.Description>Character Location</Card.Description>
+        <Card.Header>{character.name}</Card.Header>
+        <Card.Meta>{character.species}</Card.Meta>
+        <Card.Meta>{character.status}</Card.Meta>
+        <Card.Description>Location: {character.location.name}</Card.Description>
+        <Card.Description>Origin: {character.origin.name}</Card.Description>
       </Card.Content>
-      <Card.Content>
-        <NavLink>Episodes</NavLink>
+      <Card.Content extra>
+        <Card.Meta>
+          <NavLink to="/episodes">
+            <Icon name="use" />
+            Episodes
+          </NavLink>
+        </Card.Meta>
       </Card.Content>
     </Card>
   );
