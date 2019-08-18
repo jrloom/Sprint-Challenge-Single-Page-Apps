@@ -16,7 +16,7 @@ const CharacterCard = ({ character }) => {
       <Card.Content extra>
         <Card.Meta>
           <NavLink to="/episodes">
-            <Icon name="use" />
+            <Icon name="user" />
             Episodes
           </NavLink>
         </Card.Meta>
