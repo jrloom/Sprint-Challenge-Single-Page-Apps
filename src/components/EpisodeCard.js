@@ -1,19 +1,18 @@
 import React from "react";
 import { Card } from "semantic-ui-react";
 
-const LocationCard = ({ name, type, dimension, residents }) => {
+const EpisodeCard = ({ name, air_date, episode }) => {
   return (
     <Card raised>
       <Card.Content>
         <Card.Header>{name}</Card.Header>
         <Card.Description>
-          <p>Dimension: {dimension}</p>
-          <p>Type: {type}</p>
-          <p>Residents: {residents.length}</p>
+          <p>Air Date: {air_date}</p>
+          <p>Episode: {episode}</p>
         </Card.Description>
       </Card.Content>
     </Card>
   );
 };
 
-export default LocationCard;
+export default EpisodeCard;
